@@ -1,0 +1,26 @@
+{
+  "name": "cheukpang/uccode",
+  "description": "uccode parser",
+  "minimum-stability": "dev",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "kwan",
+      "email": "303198069@qq.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Cheukpang\\": "src"
+    }
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  }
+}
