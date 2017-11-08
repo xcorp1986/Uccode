@@ -2,7 +2,10 @@
 
 namespace Cheukpang;
 
-
+/**
+ * Class Uccode
+ * @package Cheukpang
+ */
 class Uccode
 {
     protected $uccodes;
