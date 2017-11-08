@@ -16,6 +16,10 @@ class Uccode
         ];
     }
 
+    /**
+     * @param $code
+     * @return string
+     */
     public function codedisp($code)
     {
         $this->uccode['pcodecount']++;
@@ -26,6 +30,10 @@ class Uccode
         return "[\tUCENTER_CODE_".$this->uccode['pcodecount']."\t]";
     }
 
+    /**
+     * @param $message
+     * @return string
+     */
     public function complie($message)
     {
         $message = htmlspecialchars($message);
@@ -142,6 +150,11 @@ class Uccode
         );
     }
 
+    /**
+     * @param $url
+     * @param $text
+     * @return string
+     */
     public function parseurl($url, $text)
     {
         if (!$url && preg_match(
@@ -171,6 +184,11 @@ class Uccode
         }
     }
 
+    /**
+     * @param $email
+     * @param $text
+     * @return string
+     */
     public function parseemail($email, $text)
     {
         if (!$email && preg_match("/\s*([a-z0-9\-_.+]+)@([a-z0-9\-_]+[.][a-z0-9\-_.]+)\s*/i", $text, $matches)) {
@@ -182,6 +200,11 @@ class Uccode
         }
     }
 
+    /**
+     * @param $url
+     * @param $tags
+     * @return mixed|string
+     */
     public function bbcodeurl($url, $tags)
     {
         if (!preg_match("/<.+?>/s", $url)) {
@@ -195,6 +218,10 @@ class Uccode
         }
     }
 
+    /**
+     * @param $code
+     * @return string
+     */
     public function tpl_codedisp($code)
     {
         return '<div class="blockcode"><code id="code'.$this->uccodes['codecount'].'">'.$code.'</code></div>';
